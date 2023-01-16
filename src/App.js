@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import AdminView from "./components/AdminView";
+import UserView from "./components/UserView";
+import "./App.css";
 
 function App() {
+  const [isAdmin, setIsAdmin] = useState(true);
+  const [projects, setProjects] = useState([]);
+
+  const handleAddProject = (newProject) => {
+    setProjects((state) => [...state, newProject]);
+  };
+
+  const handleChangeView = (isAdmin) => {
+    setIsAdmin(isAdmin);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <button onClick={() => handleChangeView(true)}>ADMIN</button>
+      <button onClick={() => handleChangeView(false)}>USER</button>
+      <AdminView addProject={(newProject) => handleAddProject(newProject)} />
     </div>
   );
 }
