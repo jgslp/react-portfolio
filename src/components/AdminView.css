@@ -1,0 +1,38 @@
+p {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
+#wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.textarea {
+    width: 96%;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    width: 50%;
+}
+
+.textarea {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+textarea {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

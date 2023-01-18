@@ -25,7 +25,7 @@ function App() {
         <button className={`nav-button ${!isAdmin ? "red" : null }`} onClick={() => handleChangeView(false)}>USER</button>
       </nav>
       <main>
-        <h2>My Portfolio</h2>
+        <h1>My Portfolio</h1>
         {isAdmin ? <AdminView addProject={(newProject) => handleAddProject(newProject)} /> : <UserView projectsArray={projects}/>}
       </main>
     </div>

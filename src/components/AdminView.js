@@ -1,5 +1,7 @@
 import { propsToAttrMap } from "@vue/shared";
 import React, { useState } from "react";
+import "./AdminView.css";
+
 
 function AdminView(props) {
   const [project, setProject] = useState({
@@ -30,32 +32,39 @@ function AdminView(props) {
 
   return (
     <div>
+      <p>Add Project</p>
       <form onSubmit={handleSubmit}>
-        <label>
-          Project Title
-          <input
-            name="title"
-            value={project.title}
-            onChange={(e) => handleInputChange(e)}
-          />
-        </label>
-        <label>
-          Image URL
-          <input
-            name="url"
-            value={project.url}
-            onChange={(e) => handleInputChange(e)}
-          />
-        </label>
-        <label>
-          Project Description
-          <input
+        <div id="wrapper">
+          <div class="inputs">
+            <label>Project Title:</label>
+            <input name="title"
+                value={project.title}
+                onChange={(e) => handleInputChange(e)}
+             />
+          </div>
+          <div class="inputs">
+            <label>Image URL:</label>
+             <input
+               name="url"
+               value={project.url}
+               onChange={(e) => handleInputChange(e)}
+             />
+          </div>
+        </div>
+        <label class="textarea">
+          Project Description:
+          <textarea
+            rows="4"
+            cols="50"
             name="description"
             value={project.description}
             onChange={(e) => handleInputChange(e)}
+            placeholder="Enter brief description here"
           />
         </label>
-        <button>Submit</button>
+        <div id="submit">
+          <button >Submit</button>
+        </div>
       </form>
     </div>
   );
