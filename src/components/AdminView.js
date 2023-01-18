@@ -1,4 +1,3 @@
-import { propsToAttrMap } from "@vue/shared";
 import React, { useState } from "react";
 import "./AdminView.css";
 
@@ -8,7 +7,7 @@ function AdminView(props) {
     url: "",
     title: "",
     description: "",
-    id: 0
+    id: 5
   });
 
   const handleInputChange = (event) => {
@@ -26,7 +25,7 @@ function AdminView(props) {
     project.id++;
     console.log(project);
     props.addProject();
-    // pass data back up to parent using props.addProject(); added line 26?
+    // pass data back up to parent using props.addProject(); added line 28?
     // don't forget to accept the props in the arguments of the function AdminView added line 4?
   };
 
