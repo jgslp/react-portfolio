@@ -15,11 +15,19 @@ function App() {
     setIsAdmin(isAdmin);
   };
 
+  const isNavButton = true;
+  
   return (
     <div>
-      <button className={isAdmin ? "red" : null } onClick={() => handleChangeView(true)}>ADMIN</button>
-      <button className={!isAdmin ? "red" : null } onClick={() => handleChangeView(false)}>USER</button>
-      {isAdmin ? <AdminView addProject={(newProject) => handleAddProject(newProject)} /> : <UserView projectArray={projects}/>}
+      <nav>
+        {/* used template literal to add multiple classes */}
+        <button className={ `nav-button ${isAdmin ? "red" : null} `} onClick={() => handleChangeView(true)}>ADMIN</button>
+        <button className={`nav-button ${!isAdmin ? "red" : null }`} onClick={() => handleChangeView(false)}>USER</button>
+      </nav>
+      <main>
+        <h2>My Portfolio</h2>
+        {isAdmin ? <AdminView addProject={(newProject) => handleAddProject(newProject)} /> : <UserView projectsArray={projects}/>}
+      </main>
     </div>
   );
 }

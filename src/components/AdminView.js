@@ -1,6 +1,7 @@
+import { propsToAttrMap } from "@vue/shared";
 import React, { useState } from "react";
 
-function AdminView() {
+function AdminView(props) {
   const [project, setProject] = useState({
     url: "",
     title: "",
@@ -22,8 +23,9 @@ function AdminView() {
     e.preventDefault();
     project.id++;
     console.log(project);
-    // pass data back up to parent using props.addProject();
-    // don't forget to accept the props in the arguments of the function AdminView
+    props.addProject();
+    // pass data back up to parent using props.addProject(); added line 26?
+    // don't forget to accept the props in the arguments of the function AdminView added line 4?
   };
 
   return (
