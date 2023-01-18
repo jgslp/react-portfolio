@@ -35,6 +35,22 @@ function AdminView() {
             onChange={(e) => handleInputChange(e)}
           />
         </label>
+        <label>
+          Image URL
+          <input
+            name="img"
+            value={project.img}
+            onChange={(e) => handleInputChange(e)}
+          />
+        </label>
+        <label>
+          Project Description
+          <input
+            name="desc"
+            value={project.desc}
+            onChange={(e) => handleInputChange(e)}
+          />
+        </label>
         <button>Submit</button>
       </form>
     </div>
