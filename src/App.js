@@ -18,10 +18,9 @@ function App() {
   return (
     <div>
 
-      <button onClick={() => handleChangeView(true)}>ADMIN</button>
-      <button onClick={() => handleChangeView(false)}>USER</button>
-      {isAdmin ? <AdminView /> : <UserView />}
-      {/* <AdminView addProject={(newProject) => handleAddProject(newProject)} /> */}
+      <button className={isAdmin ? "red" : "black" } onClick={() => handleChangeView(true)}>ADMIN</button>
+      <button className={!isAdmin ? "red" : "black" } onClick={() => handleChangeView(false)}>USER</button>
+      {isAdmin ? <AdminView caddProject={(newProject) => handleAddProject(newProject)} /> : <UserView />}
     </div>
   );
 }
