@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# React project for CodeOp bootcamp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In this repository, you will use React to build a SPA (Single Page Application).
 
-## Available Scripts
+## Objectives
 
-In the project directory, you can run:
+- Use React classes and functions to build a website portfolio.
+- Pass props to child components and propogate changes back up to parent components.
+- Use state to respond to changes.
 
-### `npm start`
+## Setup
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Run `npm install` to install packages.
+Run `npm start` to run the development server.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Basic Requirements
 
-### `npm test`
+### 1. Add two views - one for the user and one for the admin
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [ ] Add functionality.
+  - Clicking on "Admin" should show the admin view, and clicking on "User" should show the user view.
+- [ ] Add styling.
+  - The current page the user is on should be clear.
 
-### `npm run build`
+![Admin View](support/admin_view.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 2. Admin view - create a form that adds images to the page
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [ ] Add functionality.
+  - This form should accept a URL, a description, and a title.
+  - This form should have a "submit" button.
+  - After clicking the button, the image should appear on the page in the user view.
+- [ ] Add styling.
+  - Everything should be center-aligned. See attached design.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![User View](support/user_view.png)
 
-### `npm run eject`
+### 3. User view - show images of all projects, and update featured project when clicked
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- [ ] Add functionality
+  - Add at least three default images.
+  - Add an event listener on each image element on your page. When the image is clicked, it should replace the featured image at the top of the page.
+  - Clicking on other images should remove the current featured image and append a new one.
+  - The featured image should contain the image, title, and description.
+  - Use the first project as the default featured project.
+- [ ] Add styling.
+  - All images should be the same width, with padding in between.
+  - Images should be positioned in a grid pattern so that they appear approximately four across when the browser window is full size (but this should be responsive– so less items appear across as the browser window gets smaller).
+  - The featured image should be on the left, and the title and description should be on the right.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 4. Improve styling
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- [ ] Play with the styling so this looks as professional as possible!
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Resources
 
-## Learn More
+- [Explanation of Virtual DOM](https://dev.to/sadarshannaiynar/virtual-dom---the-backbone-of-react-3cpp)
+- [React documentation - tutorial](https://reactjs.org/docs/hello-world.html)
+- [Explanation of Webpack](https://survivejs.com/webpack/what-is-webpack/)
+- [Tutorial: How to set up React, webpack 4, and Babel 7 (2019)](https://dev.to/iamismile/how-to-setup-webpack-and-babel-for-react-59ph)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Notes
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+_This is a student project that was created at [CodeOp](http://CodeOp.tech), a full stack development bootcamp in Barcelona._
