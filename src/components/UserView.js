@@ -9,7 +9,7 @@ function UserView({projectsArray}) {
         <div id="grid">
             {projectsArray.map((project) => (
               <div key={project.id}>
-                <img src={project.url} alt="{project.alt}"/>
+                <img src={project.url} alt={project.alt}/>
               </div>
             ))}
         </div>
