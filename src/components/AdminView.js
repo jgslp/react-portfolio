@@ -7,7 +7,7 @@ function AdminView(props) {
     url: "",
     title: "",
     description: "",
-    id: 5
+    id: 4,
   });
 
   const handleInputChange = (event) => {
@@ -24,9 +24,9 @@ function AdminView(props) {
     e.preventDefault();
     project.id++;
     console.log(project);
-    props.addProject();
-    // pass data back up to parent using props.addProject(); added line 28?
-    // don't forget to accept the props in the arguments of the function AdminView added line 4?
+    props.addProject(project);
+    // pass data back up to parent using props.addProject(); added line 27?
+    // don't forget to accept the props in the arguments of the function AdminView added line 5?
   };
 
   return (
@@ -34,14 +34,14 @@ function AdminView(props) {
       <p>Add Project</p>
       <form onSubmit={handleSubmit}>
         <div id="wrapper">
-          <div class="inputs">
+          <div className="inputs">
             <label>Project Title:</label>
             <input name="title"
                 value={project.title}
                 onChange={(e) => handleInputChange(e)}
              />
           </div>
-          <div class="inputs">
+          <div className="inputs">
             <label>Image URL:</label>
              <input
                name="url"
@@ -50,7 +50,7 @@ function AdminView(props) {
              />
           </div>
         </div>
-        <label class="textarea">
+        <label className="textarea">
           Project Description:
           <textarea
             rows="4"
