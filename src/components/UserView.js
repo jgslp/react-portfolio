@@ -7,8 +7,8 @@ function UserView({projectsArray}) {
   return (
     <div id="container-grid">
         <div id="grid">
-            {projectsArray.map((project) => (
-              <div key={project.id}>
+            {projectsArray.map((project, index) => (
+              <div key={index}>
                 <img src={project.url} alt={project.alt}/>
               </div>
             ))}

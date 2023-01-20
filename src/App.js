@@ -53,7 +53,7 @@ function App() {
       </nav>
       <main>
         <h1>My Portfolio</h1>
-        {isAdmin ? <AdminView addProject={(newProject) => handleAddProject(newProject)} /> : <UserView projectsArray={projects}/>}
+        {isAdmin ? <AdminView projectsArray={projects} length={projects.length} addProject={(newProject) => handleAddProject(newProject)} /> : <UserView projectsArray={projects}/>}
       </main>
     </div>
   );
