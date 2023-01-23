@@ -9,10 +9,6 @@ p {
     justify-content: space-between;
 }
 
-.textarea {
-    width: 96%;
-}
-
 .inputs {
     display: flex;
     flex-direction: column;

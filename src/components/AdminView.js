@@ -23,11 +23,10 @@ function AdminView(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-   
     setProject((project) => ({...project, id:props.length}));
     props.addProject(project);
-    console.log(project);
-    console.log(props);
+    //console.log(project);
+    //console.log(props);
     // pass data back up to parent using props.addProject(); 
     // don't forget to accept the props in the arguments of the function AdminView 
   };
@@ -65,7 +64,7 @@ function AdminView(props) {
           />
         </label>
         <div id="submit">
-          <button >Submit</button>
+          <button className="btn btn-primary">Submit</button>
         </div>
       </form>
     </div>
