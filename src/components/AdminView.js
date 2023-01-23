@@ -24,6 +24,8 @@ function AdminView(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     //setProject((project) => ({...project, id:props.length}));
+
+    // ternary operator to prevent submission of empty forms
     (project.url === "") 
     ? (alert ("Please enter a URL"))
     : (props.addProject(project));
