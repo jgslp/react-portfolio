@@ -46,7 +46,8 @@ function App() {
 
   const handleAddProject = (newProject) => {
     setProjects((state) => [...state, {...newProject, id}]);
-    handleIncrementId();
+    handleIncrementId()
+    setIsAdmin(false);
   };
 
   const handleChangeView = (isAdmin) => {
