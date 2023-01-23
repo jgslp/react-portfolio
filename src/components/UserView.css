@@ -42,3 +42,6 @@
   cursor: pointer;
 }
 
+.grid-img:hover {
+  opacity: 0.6;
+}
