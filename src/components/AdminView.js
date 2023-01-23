@@ -23,8 +23,11 @@ function AdminView(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setProject((project) => ({...project, id:props.length}));
-    props.addProject(project);
+    //setProject((project) => ({...project, id:props.length}));
+    (project.url === "") 
+    ? (alert ("Please enter a URL"))
+    : (props.addProject(project));
+   
     //console.log(project);
     //console.log(props);
     // pass data back up to parent using props.addProject(); 
