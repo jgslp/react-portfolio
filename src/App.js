@@ -5,6 +5,7 @@ import "./App.css";
 
 function App() {
   const [isAdmin, setIsAdmin] = useState(true);
+  
   const [projects, setProjects] = useState([
     {
       id: 1,
@@ -35,9 +36,17 @@ function App() {
       description: "Train station"
     },
   ]);
+  const [id, setID] = useState(projects.length + 1);
+  
+
+  // created a function that increments id
+  const handleIncrementId = () => {
+    setID((prevID) => (prevID + 1));
+  }
 
   const handleAddProject = (newProject) => {
-    setProjects((state) => [...state, newProject]);
+    setProjects((state) => [...state, {...newProject, id}]);
+    handleIncrementId();
   };
 
   const handleChangeView = (isAdmin) => {
@@ -48,12 +57,19 @@ function App() {
     <div>
       <nav>
         {/* used template literal to add multiple classes */}
+        {/* could also do onClick={() => setIsAdmin(true)} */}
+        {/* could also set className={isAdmin && "red" }*/}
         <button className={ `nav-button ${isAdmin ? "red" : null} `} onClick={() => handleChangeView(true)}>ADMIN</button>
         <button className={`nav-button ${!isAdmin ? "red" : null }`} onClick={() => handleChangeView(false)}>USER</button>
       </nav>
       <main>
         <h1>My Portfolio</h1>
-        {isAdmin ? <AdminView projectsArray={projects} length={projects.length} addProject={(newProject) => handleAddProject(newProject)} /> : <UserView projectsArray={projects}/>}
+        {isAdmin ? (
+          <AdminView 
+            addProject={(newProject) => handleAddProject(newProject)} /> 
+        ) : (
+            <UserView projectsArray={projects}/> // userView will expect prop with the value of {projects}
+        )}
       </main>
     </div>
   );

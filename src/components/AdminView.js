@@ -7,7 +7,6 @@ function AdminView(props) {
     url: "",
     title: "",
     description: "",
-    id: null,
   });
 
   const handleInputChange = (event) => {
@@ -24,12 +23,13 @@ function AdminView(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+   
     setProject((project) => ({...project, id:props.length}));
+    props.addProject(project);
     console.log(project);
     console.log(props);
-    props.addProject(project);
-    // pass data back up to parent using props.addProject(); added line 27?
-    // don't forget to accept the props in the arguments of the function AdminView added line 5?
+    // pass data back up to parent using props.addProject(); 
+    // don't forget to accept the props in the arguments of the function AdminView 
   };
 
   return (
