@@ -43,8 +43,8 @@ function AdminView(props) {
         <div id="wrapper">
           <div className="inputs">
             <label>Project Title:</label>
-            <input name="title"
-                value={project.title}
+            <input name="name"
+                value={project.name}
                 onChange={(e) => handleInputChange(e)}
              />
           </div>
