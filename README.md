@@ -26,11 +26,11 @@ Run `npm start` to run the development server.
 
 ### 2. Admin view - create a form that adds images to the page
 
-- [ ] Add functionality.
+- [x] Add functionality.
   - This form should accept a URL, a description, and a title.
   - This form should have a "submit" button.
   - After clicking the button, the image should appear on the page in the user view.
-- [ ] Add styling.
+- [x] Add styling.
   - Everything should be center-aligned. See attached design.
 
 ![User View](support/user_view.png)

@@ -16,10 +16,12 @@ function handleClick(id) {
   return (
     <div>
       {/* style set to hide featured section until img is clicked */}
-      <div id="featured" style={{display: showFeatured ? "block" : "none"}} > 
+      <div id="featured" style={{display: showFeatured ? "flex" : "none"}} > 
           <img id="featured-img" src={featured.url} className="center"/>
-          <p id="featured-name">{featured.name}</p>
-          <p id="featured-desc">{featured.description}</p>
+          <div id="featured-text">
+            <p id="featured-name">{featured.name}</p>
+            <p id="featured-desc">{featured.description}</p>
+          </div>
       </div>
       <div id="container-grid">
           <div id="grid">

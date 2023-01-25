@@ -1,13 +1,21 @@
 #featured {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  justify-content: center;
 }
-
+/* 
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+ */
+
+#featured-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
 }
 
 #featured-name {
@@ -23,7 +31,6 @@
   width: 600px;
   height: 400px;
   object-fit: cover;
-
 }
 
 #grid {

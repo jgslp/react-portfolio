@@ -16,6 +16,10 @@ main {
   align-items: center;
 }
 
+h1 {
+  padding-bottom: 20px;
+}
+
 .red {
   color: red;
   font-size: 18px;
